@@ -31,4 +31,11 @@
 ### Resultado
 ![alt text](./docs/result.png "Transformação e plot")
 
+# Exemplos
+![alt text](./docs/e1.png "Transformação e plot")
+![alt text](./docs/e2.png "Transformação e plot")
+![alt text](./docs/e3.png "Transformação e plot")
+![alt text](./docs/e4.png "Transformação e plot")
+![alt text](./docs/e5.png "Transformação e plot")
+
 
