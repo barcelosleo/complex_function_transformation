@@ -6,6 +6,12 @@ from ComplexFunctionTransformation import Curve, Transformation, Point
 def f(z):
     return (z - 1)/(z + 1)
 
+def f2(z):
+    return 3*z
+
+def f3(z):
+    return np.exp(1j * np.pi)*z
+
 if __name__ == "__main__":
     t_esq = Curve.rect_segment((-2, -1), (0, 2))
     t_dir = Curve.rect_segment((0, 2), (2, -1))
@@ -23,6 +29,8 @@ if __name__ == "__main__":
     sin = Transformation(t_function=np.sin, curves=curvas)
     cos = Transformation(t_function=np.cos, curves=curvas)
     c_f = Transformation(t_function=f, curves=curvas)
+    c_f2 = Transformation(t_function=f2, curves=curvas)
+    c_f3 = Transformation(t_function=f3, curves=curvas)
 
     e.plot(plot_title=r'$z \longrightarrow e^z$')
     plt.show()
@@ -34,4 +42,7 @@ if __name__ == "__main__":
     plt.show()
 
     c_f.plot(plot_title=r'$z \longrightarrow \frac{z-1}{z+1}$')
+    plt.show()
+
+    c_f3.plot(plot_title=r'$z \longrightarrow ze^{\pi i}$')
     plt.show()
