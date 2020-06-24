@@ -8,5 +8,5 @@ class Point():
         self.color = color
 
     def plot(self):
-        plt.plot([self.x], [self.y], 'ro', color=self.color)
+        plt.plot([self.x], [self.y], '.', color=self.color)
         plt.text(self.x, self.y, self.legend, color=self.color)
