@@ -20,7 +20,7 @@ class Curve():
     @staticmethod
     def circle(r = 1, center = (0, 0), **kwargs):
         points = []
-        angles = np.linspace(0, 2 * np.pi, 100)
+        angles = np.linspace(0, 2 * np.pi, 500)
         for angle in angles:
             points.append((r * np.cos(angle) + center[0], r * np.sin(angle) + center[1]))
 
@@ -49,11 +49,17 @@ class Curve():
 
     @staticmethod
     def rect_segment(origin = (0,0), end = (1, 1), **kwargs):
+        points = []
+
+        if end[0] == origin[0]:
+            for y in np.linspace(origin[1], end[1]):
+                points.append((end[0], y))
+
+            return Curve(points, **kwargs)
+
         m = (end[1] - origin[1]) / (end[0] - origin[0])
 
         b = origin[1] - m * origin[0]
-
-        points = []
 
         for x in np.linspace(origin[0], end[0], 100):
             points.append((x, m * x + b))
