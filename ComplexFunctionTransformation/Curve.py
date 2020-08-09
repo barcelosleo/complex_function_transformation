@@ -27,6 +27,18 @@ class Curve():
         return Curve(points, **kwargs)
 
     @staticmethod
+    def semi_circle(r = 1, center = (0, 0), superior = True, **kwargs):        
+        points = []
+        angles = np.linspace(0, np.pi, 500)
+        if not superior:
+            angles = [-angle for angle in angles]
+
+        for angle in angles:
+            points.append((r * np.cos(angle) + center[0], r * np.sin(angle) + center[1]))
+
+        return Curve(points, **kwargs)
+
+    @staticmethod
     def box(width = 1, height = 1, center = (0, 0), **kwargs):
         points = []
         
