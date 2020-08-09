@@ -1,5 +1,10 @@
 # Algoritmo para visualização de transformações de funções complexas
 
+## Requerimentos
+1) Python 3.x
+2) [Matplotlib](https://matplotlib.org/3.2.2/users/installing.html)
+3) [Numpy](https://www.edureka.co/blog/install-numpy/)
+
 ## Modo de Uso
 
 1) Para utilizar os algoritmos, você deve importar as classes **Transformation**, **Curve** e **Point**;
